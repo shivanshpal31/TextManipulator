@@ -18,6 +18,10 @@ function App() {
     }, 1500);
   };
 
+  const [customTextAreaColor, setCustomTextAreaColor] = useState({
+    backgroundColor: "#ffffff"
+  });
+
   const [customThemeText, setCustomThemeText] = useState({
     color: "#353535",
   });
@@ -36,6 +40,10 @@ function App() {
     setCustomThemeText({
       color: "#353535",
     })
+    setCustomTextAreaColor({
+      color: "#353535",
+      backgroundColor: "#ffffff"
+    })
     document.body.style.backgroundColor="#FFFFFF";
     document.getElementsByClassName("content").color="#353535";
   };
@@ -49,6 +57,10 @@ function App() {
     setCustomThemeText({
       color: "#E0E0E0",
     })
+    setCustomTextAreaColor({
+      color: "#ffffff",
+      backgroundColor: "#212529"
+    })
     document.body.style.backgroundColor="#212529";
   };
 
@@ -60,6 +72,10 @@ function App() {
     });
     setCustomThemeText({
       color: "#F1E4E8",
+    })
+    setCustomTextAreaColor({
+      color: "#F1E4E8",
+      backgroundColor: "#4B0082"
     })
     document.body.style.backgroundColor="#4B0082";
   };
@@ -98,7 +114,8 @@ function App() {
               path="/"
               element={<TextArea showAlert={showAlert} 
               theme={customThemeNav} 
-              colorText={customThemeText}/>}
+              colorText={customThemeText}
+              textAreaColor={customTextAreaColor}/>}
             ></Route>
           </Routes>
         </div>

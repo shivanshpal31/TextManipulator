@@ -49,7 +49,7 @@ export default function TextArea (props) {
         <textarea
           className={`form-control content`}
           id="text"
-          // style={props.theme}
+          style={props.textAreaColor}
           rows="8"
           placeholder="Start Writing"
           value={text}
