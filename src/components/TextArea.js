@@ -44,11 +44,12 @@ export default function TextArea (props) {
 
   return (
     <div>
-      <div className={`form-group container my-3 p-3 bg-${props.mode === "light" ? "light" : "dark"}`}>
-        <h2 className={`text-${props.mode==="light"?"dark":"light"}`}>Enter your Text </h2>
+      <div className={`form-group container my-3 p-3`}>
+        <h2 style={props.colorText}>Enter your Text </h2>
         <textarea
-          className={`form-control bg-${props.mode==="light"?"light":"dark"} text-${props.mode==="light"?"dark":"light"}`}
+          className={`form-control content`}
           id="text"
+          // style={props.theme}
           rows="8"
           placeholder="Start Writing"
           value={text}
@@ -62,9 +63,9 @@ export default function TextArea (props) {
           <button className="btn btn-danger mx-2" onClick={handleClear}>Clear All</button>
         </div>
         <div className="my-3">
-          <h2 className={`text-${props.mode==="light"?"dark":"light"}`}>Preview</h2>
-          <h4 className={`text-${props.mode==="light"?"dark":"light"}`}>Words length: {text.length==0? 0: (text.split(" ")).length}</h4>
-          <p className={`text-${props.mode==="light"?"dark":"light"}`}>{text.length==0? "No preview Available!!! Please Enter something to show":text}</p>
+          <h2 style={props.colorText}>Preview</h2>
+          <h4 style={props.colorText}>Words length: {text.length==0? 0: (text.split(" ")).length}</h4>
+          <p style={props.colorText}>{text.length==0? "No preview Available!!! Please Enter something to show":text}</p>
 
         </div>
       </div>
