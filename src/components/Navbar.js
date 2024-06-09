@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
@@ -32,7 +33,7 @@ export default function Navbar(props) {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/AboutUs">
+            <Link className="nav-link" to="/about">
               {props.aboutText}
             </Link>
           </li>

@@ -1,4 +1,4 @@
-import { useState, UseRef } from "react";
+import { useState } from "react";
 import AboutUs from "./components/AboutUs";
 import Navbar from "./components/Navbar";
 import TextArea from "./components/TextArea";
@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 
 function App() {
-  const myRef = UseRef(null)
   const [darkMode, setDarkMode] = useState("light");
 
   const [alert, setAlert] = useState(null);
@@ -35,7 +34,7 @@ function App() {
   };
 
   return (
-    <div ref={myRef}>
+    <>
     
     <Router>
       <Navbar
@@ -55,7 +54,7 @@ function App() {
         </Routes>
       </div>
       </Router>
-    </div>
+    </>
   );
 }
 
